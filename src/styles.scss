@@ -1,1 +1,383 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese');
+
+/*COLORS*/
+
+$pink-go: #d014d7;
+$blue-go: #4433db;
+$white-go: #FFFFFF;
+$black-go: #13131f;
+$gray-go: #1d2029;
+$yello-go: #ffc000;
+$red-go: #620b0b;
+
+/*END COLORS*/
+
+/*CUSTON CHECKBOX*/
+
+.custom_checkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.custom_checkbox > [type="radio"]:not(:checked),
+.custom_checkbox > [type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.custom_checkbox > [type="radio"]:not(:checked) + label,
+.custom_checkbox > [type="radio"]:checked + label {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right:20px;
+}
+/*.custom_checkbox > [type="radio"]:not(:checked) + label:before,
+.custom_checkbox > [type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+}*/
+.custom_checkbox > [type="radio"]:not(:checked) + label:after {
+  content: '\f10c';
+  font-family: FontAwesome;
+  font-size: 2rem;
+  color: $white-go;
+  transition: all .2s;
+}
+.custom_checkbox > [type="radio"]:checked + label:after {
+  content: '\f192';
+  font-family: FontAwesome;
+  font-size: 2rem;
+  color: $pink-go;
+  transition: all .2s;
+}
+.custom_checkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1.2rem;
+}
+.custom_checkbox > [type="checkbox"]:not(:checked),
+.custom_checkbox > [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.custom_checkbox > [type="checkbox"]:not(:checked) + label,
+.custom_checkbox > [type="checkbox"]:checked + label {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-right:20px;
+}
+/*.custom_checkbox > [type="checkbox"]:not(:checked) + label:before,
+.custom_checkbox > [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+}*/
+.custom_checkbox > [type="checkbox"]:not(:checked) + label:after {
+  content: '';
+  font-family: FontAwesome;
+  font-size: 2rem;
+  color: $white-go;
+  transition: all .2s;
+}
+.custom_checkbox > [type="checkbox"]:checked + label:after {
+  content: '';
+  font-family: FontAwesome;
+  font-size: 2rem;
+  color: $pink-go;
+  transition: all .2s;
+}
+.custom_checkbox.disabled{
+	label{
+		opacity: 0.5;
+		margin-right: 20px
+	}
+	span{
+		line-height: 2rem;
+		display: block;
+		float: right;
+		margin-top:6px;
+		opacity: 0.5;
+	}
+}
+.custom_checkbox{
+	span{
+		line-height: 2rem;
+		display: block;
+		float: right;
+		margin-top:6px;
+	}
+}
+
+/*END CUSTOM CHECKBOX*/
+
+html { font-size: 62.5%; }
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #000000;
+	color: #FFFFFF;
+  font-size: 1.4rem;
+}
+*{
+	box-sizing: border-box;
+}
+
+
+.btn{
+  width: auto;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding:0 40px;
+  height: 40px;
+  border-radius:20px;
+  background:#ffffff;
+  text-align:center;     
+  line-height:40px;
+  font-size: 1.4rem;
+  cursor:pointer;
+  &.gradient {
+  height: 40px;
+  border-radius:20px;
+  color:#FFFFFF;
+  font-weight:700;
+  position: relative;
+  background-image: linear-gradient(
+      175deg,
+      #3037db, 
+      #9b20db, 
+      #cc15db
+    );  
+  	&.black{
+		border:medium none;
+		position: relative;
+
+        max-width: 100%;
+		//color:transparent;
+		//-webkit-background-clip: text;
+		//background-clip: text;
+		background-image: linear-gradient(
+		175deg,
+		#3037db, 
+		#9b20db, 
+		#cc15db
+		);    
+		>span{
+        position:relative;
+        display: block;
+        width: 100%;
+        z-index: 10;
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background-image: linear-gradient(
+          175deg,
+          #3037db, 
+          #9b20db, 
+          #cc15db
+        ); 
+      }
+      &:after{      
+        content:"";
+        position: absolute;
+        top:2px;
+        left:2px;
+        z-index: 2;
+        width:calc(100% - 4px);
+        height:calc(100% - 4px);
+        background:#000000;
+        border-radius:25px;
+      }
+  	}
+  } 
+  &.black{
+    background:#000000;
+    color:#FFFFFF;
+    border:solid 2px #FFFFFF;    
+    line-height: 38px;
+    &.large{
+    	line-height: 48px;
+    }
+    &.small{
+    	line-height: 22px;
+    }
+
+  }  
+  &.large{
+    height:50px;
+    border-radius:25px;
+    line-height:50px;
+    font-size:1.6rem;
+  	padding:0 60px;
+  }
+  &.small{
+    height:30px;
+    border-radius:25px;
+    line-height:30px;
+    font-size:1.2rem;    
+  	line-height:24px;
+  }
+}
+
+
+.color-example{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius:5px;
+	margin-left:5px;
+	&.pink-go{
+		background: $pink-go;
+	}
+	&.blue-go{
+		background: $blue-go;
+	}
+	&.white-go{
+		background: $white-go;
+	}
+	&.black-go{
+		background: $black-go;
+		border:solid 1px $white-go;
+	}
+	&.gray-go{
+		background: $gray-go;
+	}
+}
+
+.pagination{
+  .pagination-page a{
+    background: none transparent;
+    border: medium none;
+    color: $white-go;
+  }
+  .pagination-page.active a{
+    background: none transparent;
+    color: $pink-go;
+  }
+  .pagination-next,
+  .pagination-prev{ 
+    a{      
+      background: $gray-go;
+      border:medium none;
+      color: $pink-go;
+    }
+    &.disabled {
+      a{      
+        background: $gray-go;
+        border:medium none;
+        color: $pink-go;
+      }
+    }
+  }
+  li a{
+    font-size: 1.6rem !important;    
+    cursor: pointer;
+    padding:.5rem .75rem !important;
+  }
+}
+
+/*FONTS*/
+
+h1{
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+h2{
+  font-size: 3rem;
+  font-weight: 700;
+}
+h3{
+  font-size: 2.4rem;
+  font-weight: 400;
+  &.light{
+    font-weight: 200;
+  }
+  &.bold{
+    font-weight: 700;
+  }
+}
+h4{
+  font-size: 2rem;
+  font-weight: 400;
+  &.light{
+    font-weight: 200;
+  }
+  &.bold{
+    font-weight: 700;
+  }
+}
+h5{
+  font-size: 1.6rem;
+  font-weight: 400;
+  &.light{
+    font-weight: 200;
+  }
+  &.medium{
+    font-weight: 500;
+  }
+  &.bold{
+    font-weight: 700;
+  }
+}
+/*END FONTS*/
+
+/*INPUT*/
+input{
+  color:$white-go;
+  background: none transparent;
+  border:medium none;
+  width:100%;
+  border-bottom: solid 1px #7a7a7e;
+  font-size: 1.4rem;
+  &.completed{
+    border-bottom: solid 1px $blue-go;
+  }
+  &.warning{
+    border-bottom: solid 1px $yello-go;
+  }
+  &.error{
+    border-bottom: solid 1px $red-go;
+  }
+  &.success{
+    border-bottom: solid 1px $pink-go;
+  }
+
+}
+input:focus{
+  border-bottom: solid 1px $white-go;
+  outline: none;
+}
+.input_with_label{
+  label{
+    width: 30%;
+    display: inline-block;
+  }
+  input{
+    display: inline-block;
+    width: 69%;
+  }
+}
+/*END OF INPUT*/
+
+@media (max-width: 768px) {
+	.btn,.btn-group {
+		width:100%;
+	}
+}

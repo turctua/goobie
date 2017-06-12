@@ -1,0 +1,205 @@
+<br><br>
+<div class="container-fluid">
+	<div class="row">
+
+		<!-- ===========================  Buttons ========================= -->
+		<div class="col-lg-12">
+			<h3>Buttons</h3>
+		</div>
+		<div class="col-lg-3">
+			<button type="button" class="btn btn-default gradient large">LARGE BUTTON</button>	
+
+			<br><br>
+
+			<button type="button" class="btn btn-default gradient">DEFAULT BUTTON</button>	
+
+			<br><br>
+
+			<button type="button" class="btn btn-default gradient small">SMALL BUTTON</button>	
+		</div>
+
+		<br><br>
+		<div class="col-lg-3">
+			<button type="button" class="btn btn-default gradient black large"><span>LARGE BUTTON</span></button>	
+
+			<br><br>
+
+			<button type="button" class="btn btn-default gradient black"><span>DEFAULT BUTTON</span></button>	
+
+			<br><br>
+
+			<button type="button" class="btn btn-default gradient black small"><span>SMALL BUTTON</span></button>	
+		</div>
+
+		<br><br>
+		<div class="col-lg-3">
+			<button type="button" class="btn btn-default black large">LARGE BUTTON</button>	
+
+			<br><br>
+
+			<button type="button" class="btn btn-default black">DEFAULT BUTTON</button>	
+
+			<br><br>
+
+			<button type="button" class="btn btn-default black small">SMALL BUTTON</button>	
+		</div>
+
+		<br><br>
+		<div class="col-lg-3">
+			<button type="button" class="btn btn-default large">LARGE BUTTON</button>	
+
+			<br><br>
+
+			<button type="button" class="btn btn-default ">DEFAULT BUTTON</button>	
+
+			<br><br>
+
+			<button type="button" class="btn btn-default small">SMALL BUTTON</button>	
+		</div>
+		<!-- ===========EDN OF BUTTONS =============================== -->
+
+		<!-- ===========================  COLORS ========================= -->
+		
+		<div class="col-lg-6">
+			<div class="col-lg-12">
+			<br><br>
+				<h3>Colors</h3>
+			</div>
+			<div class="color-example pink-go"></div>
+			<div class="color-example blue-go"></div>			
+			<div class="color-example white-go"></div>
+			<div class="color-example black-go"></div>
+			<div class="color-example gray-go"></div>	
+		</div>
+		<!-- ============END OF COLLORS ============================ -->
+
+		<!-- =========================== CHECKBOXES AND RADIO ========================== -->
+		<div class="col-lg-6">		
+			<div class="col-lg-12">
+			<br><br>
+				<h3>Checkbos and radio</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="custom_checkbox">
+	                    <input type="checkbox" id="checlbox1" name="check"/>
+	                    <label for="checlbox1"></label>
+	                    <span>No one be fillin’ my box!</span>
+	                </div>
+	                <br>
+	                <div class="custom_checkbox disabled">
+	                    <input type="checkbox" id="checlbox2" name="check" disabled="" />
+	                    <label for="checlbox2"></label>
+	                    <span>Aaand I’m disabled</span>
+	                </div>
+	                <br>
+	                <div class="custom_checkbox">
+	                    <input type="checkbox" id="checlbox3" name="check" checked="" />
+	                    <label for="checlbox3"></label>
+	                    <span>Oy! Me box is filled!</span>
+	                </div>
+	                <br>
+	                <div class="custom_checkbox disabled">
+	                    <input type="checkbox" id="checlbox4" name="check" checked="" disabled="" />
+	                    <label for="checlbox4"></label>
+	                    <span>Aaand I’m disabled</span>
+	                </div>
+				</div>
+				<div class="col-lg-6">
+					<div class="custom_checkbox">
+	                    <input type="radio" id="radio1" name="check"/>
+	                    <label for="radio1"></label>
+	                    <span>I’m so empty inside</span>
+	                </div>
+	                <br>
+	                <div class="custom_checkbox disabled">
+	                    <input type="radio" id="radio2" name="check" disabled="" />
+	                    <label for="radio2"></label>
+	                    <span>At least you got picked</span>
+	                </div>
+	                <br>
+	                <div class="custom_checkbox">
+	                    <input type="radio" id="radio3" name="check" checked=""/>
+	                    <label for="radio3"></label>
+	                    <span>Touched me button, eh?</span>
+	                </div>
+	                <br>
+	                <div class="custom_checkbox disabled">
+	                    <input type="radio" id="radio4" name="check1" checked="" disabled="" />
+	                    <label for="radio4"></label>
+	                    <span>Selected, but disabled</span>
+	                </div>
+				</div>
+			</div>
+		</div>
+		<!-- ====================END OF CHECKBOXES AND RADIO =========================== -->
+
+		<!-- ===============PAGINATION ===================== -->
+		<div class="col-lg-6">
+			<div class="col-lg-12">
+			<br><br>
+				<h3>Pagination</h3>
+			</div>
+				<pagination [boundaryLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm"
+            previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>            
+            <!-- Uncoment line below if you need to see how the pagination works -->
+            <!-- <pre class="card card-block card-header">The selected page no: {{currentPage}}/{{smallnumPages}}</pre> --> 
+		</div>
+		<!-- ===============END OF PAGINATION ================= -->
+
+		<!-- FONTS -->
+		<div class="col-lg-6">
+			<div class="col-lg-12">
+			<br><br>
+				<h3>Fonts</h3>
+			</div>
+			<h1>H1 URW Geometric Bold</h1>
+			<h2>H2 URW Geometric Bold</h2>
+			<h3 class="light">H3 URW Geometric Light</h3>
+			<h3>H3 Regular</h3>
+			<h3 class="bold">H3 BOLD</h3>
+			<h4 class="light">H4 URW Geometric Light</h4>
+			<h4>H4 Regular</h4>
+			<h4 class="bold">H4 BOLD</h4>
+			<h5 class="light">H5 URW Geometric Light</h5>
+			<h5>H5 Regular</h5>			
+			<h5 class="medium">H5 medium</h5>
+			<h5 class="bold">H5 BOLD</h5>
+		</div>
+		<!-- END OF FONTS -->
+
+		<!-- TEXTFIELD -->
+		<div class="col-lg-6">
+			<div class="col-lg-12">
+			<br><br>
+				<h3>Textfield Interaction</h3>
+			</div>
+			<div class="input_with_label">
+				<label for="input1">Defaul</label>
+				<input type="text" id="input1" name="" placeholder="Default with hint">
+			</div>
+			<div class="input_with_label">
+				<label for="input2">Completed</label>
+				<input type="text" id="input2" class="completed" name="" placeholder="Default with hint">
+			</div>
+			<div class="input_with_label">
+				<label for="input3">Warning</label>
+				<input type="text" id="input3" class="warning" name="" placeholder="Default with hint">
+			</div>
+			<div class="input_with_label">
+				<label for="input4">Error</label>
+				<input type="text" id="input4" class="error" name="" placeholder="Default with hint">
+			</div>
+			<div class="input_with_label">
+				<label for="input5">Success</label>
+				<input type="text" id="input5" class="success" name="" placeholder="Default with hint">
+			</div>
+			<br>
+		</div>
+
+		<!-- END OF TEXTFIELD -->
+
+
+
+	</div>
+</div>
