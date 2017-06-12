@@ -10,6 +10,8 @@ $black-go: #13131f;
 $gray-go: #1d2029;
 $yello-go: #ffc000;
 $red-go: #620b0b;
+$orange-go: #de8024;
+$green-go: #218a23;
 
 /*END COLORS*/
 
@@ -136,46 +138,45 @@ body {
 }
 
 
-.btn{
+.btn-default{
   width: auto;
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  padding:0 40px;
-  height: 40px;
+  padding:0 3.4rem;
+  height: 3.2rem;
   border-radius:20px;
   background:#ffffff;
   text-align:center;     
-  line-height:40px;
+  line-height:3rem;
   font-size: 1.4rem;
+  font-weight: 200;
   cursor:pointer;
   &.gradient {
-  height: 40px;
-  border-radius:20px;
-  color:#FFFFFF;
-  font-weight:700;
-  position: relative;
-  background-image: linear-gradient(
-      175deg,
-      #3037db, 
-      #9b20db, 
-      #cc15db
-    );  
+    height: 3.2rem;
+    line-height: 3rem;
+    border-radius:20px;
+    color:#FFFFFF;
+    font-weight:400;
+    position: relative;
+    background-image: linear-gradient(
+        175deg,
+        #3037db, 
+        #9b20db, 
+        #cc15db
+      );  
   	&.black{
 		border:medium none;
 		position: relative;
-
-        max-width: 100%;
-		//color:transparent;
-		//-webkit-background-clip: text;
-		//background-clip: text;
+    max-width: 100%;
+    line-height: 3rem;
 		background-image: linear-gradient(
 		175deg,
 		#3037db, 
 		#9b20db, 
 		#cc15db
-		);    
+		);   
 		>span{
         position:relative;
         display: block;
@@ -211,28 +212,28 @@ body {
     background:#000000;
     color:#FFFFFF;
     border:solid 2px #FFFFFF;    
-    line-height: 38px;
+    line-height: 3rem;
     &.large{
-    	line-height: 48px;
+    	line-height:3.8rem;
     }
     &.small{
-    	line-height: 22px;
+    	line-height: 2rem;
     }
 
   }  
   &.large{
-    height:50px;
+    height:4rem;
     border-radius:25px;
-    line-height:50px;
+    line-height:3.8rem;
     font-size:1.6rem;
   	padding:0 60px;
   }
   &.small{
-    height:30px;
+    height:2.4rem;
     border-radius:25px;
-    line-height:30px;
+    line-height:2rem;
     font-size:1.2rem;    
-  	line-height:24px;
+  	line-height:2rem;
   }
 }
 
@@ -296,15 +297,15 @@ body {
 /*FONTS*/
 
 h1{
-  font-size: 3.6rem;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 h2{
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 h3{
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
   &.light{
     font-weight: 200;
@@ -314,7 +315,7 @@ h3{
   }
 }
 h4{
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   &.light{
     font-weight: 200;
@@ -324,7 +325,7 @@ h4{
   }
 }
 h5{
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 400;
   &.light{
     font-weight: 200;
@@ -375,6 +376,318 @@ input:focus{
   }
 }
 /*END OF INPUT*/
+
+/*DROPDOWNS*/
+.btn{
+  font-size: 1.4rem;
+}
+.btn-group{
+   .btn-primary{
+      color:$white-go;
+      background: none transparent;
+      border:medium none;
+      width:100%;
+      border-bottom: solid 1px $white-go;
+      font-size: 1.4rem;
+      border-radius:  0;
+      &:focus{
+          outline-style:none;
+          box-shadow:none;
+      }
+      &[aria-expanded="true"]{
+        background: none transparent;
+        border:medium none;
+      }
+   } 
+   .dropdown-menu{
+      font-size:1.4rem;
+      border:medium none; 
+      a:hover{
+        background:$blue-go;
+        color: $white-go;
+      }
+   }
+}
+/*END OF DROPDOWNS*/
+
+/*BREADCRUMBS*/
+.breadcrumb{
+  font-size: 1.2rem;  
+  background: none transparent;
+  li{
+    display: inline-block;
+    a{
+      color: #5a5a63;
+      &:hover{
+        color:#FFFFFF;
+      }
+    }
+    &:after{
+      content:"/";
+      display: inline-block;
+      margin:0 .5rem;
+      color: #5a5a63;
+    }
+    &:last-child:after{
+      content:"";
+    }
+  }
+  &.type2{
+    li{
+      &:after{
+        content:">";
+      }
+      &:last-child:after{
+        content:"";
+      }
+    }
+  }
+}
+/*END OF BREADCRUMBS*/
+
+/*TABS*/
+.tab-container{
+  .nav-tabs{
+    background: none transparent;
+    border:medium none;
+    a{
+      background: none transparent;
+      border:medium none;
+      color: $white-go;
+      border-bottom: solid 1px $white-go;
+      font-size: 1.4rem;
+      margin:0;
+      &.active{
+        background: none transparent;        
+        color: $white-go;
+        border:solid 1px $white-go;        
+        font-size: 1.4rem;
+        border-bottom:medium none;
+        border-radius:.5rem .5rem 0 0;
+        &:hover{
+          border:solid 1px $white-go;
+          border-bottom:medium none;
+          border-radius:.5 .5rem 0 0;
+        }
+      }
+      &:hover{
+        border:medium none;
+        color: $blue-go;
+        border-bottom: solid 1px $white-go;
+        font-size: 1.4rem;
+        margin:0;
+        transform: none;
+      }
+    }
+  }
+  .btn-group{
+    .btn{
+      border:medium none;
+      padding:0;
+      margin:0;
+      &:hover{
+        color: $blue-go;
+      }      
+    }
+    .dropdown-menu a{
+      color: $black-go;
+    }
+  }
+}
+.tab-container.type2{
+  .nav-tabs{
+    a{
+      border:medium none;
+      font-size: 2.4rem;
+      border-bottom: solid 2px $gray-go;
+      &.active{
+        border:medium none;        
+        border-bottom: solid 2px $pink-go;
+        &:hover{
+          border:medium none;          
+          border-bottom: solid 2px $pink-go;
+        }
+      }
+      &:hover{
+        border:medium none;        
+        border-bottom: solid 2px $pink-go;
+      }
+
+    }
+  }
+}
+/*END OF TABS*/
+
+/*ALERTS*/
+.alert {
+  border:medium none;
+  padding-top:1.2rem;
+  padding-bottom:1.2rem;
+  p{
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+  .close{
+    top:-.5rem;
+    text-shadow: none;
+  }
+  &.alert-primary{
+    background: rgba(68,51,219,.2);
+    color: $blue-go;
+    .close{
+      color: $blue-go;
+    }
+  }
+  &.alert-info{
+    background: rgba(33,138,35,.2);
+    color: #218a23;
+    .close{
+      color: #218a23;
+    }
+  }
+  &.alert-success{
+    background: rgba(288,20,215,.2);
+    color: $pink-go;
+    .close{
+      color: $pink-go;
+    }
+  }
+  &.alert-warning{
+    background: rgba(255,192,0,.2);
+    color: #ffc000;
+    .close{
+      color:#ffc000;
+    }
+  }
+  &.alert-danger{
+    background: rgba(98,11,11,.2);
+    color: $red-go;
+    .close{
+      color: $red-go;
+    }
+  }
+}
+/*END OF ALERTS*/
+
+/*LABELS*/
+.label{
+  font-size: 1.2rem;
+  padding:0 1.2rem;
+  line-height: 2.6rem;
+  border-radius:1.3rem;
+  margin:0 .5rem;
+  &.label-default{
+    background: #5a5a63;
+  }
+  &.label-primary{
+    background: $blue-go;
+  }
+  &.label-success{
+    background: $pink-go;
+  }
+  &.label-info{
+    background: $green-go;
+  }
+  &.label-warning{
+    background: $orange-go;
+  }
+  &.label-alert{
+    background: $yello-go;
+  }
+  &.label-danger{
+    background: $red-go;
+  }
+}
+h1 .label{
+  line-height: 3rem;
+  font-size: 1.8rem;
+  display: inline-block;
+  vertical-align: top;
+  background: $blue-go !important;
+}
+h2 .label{
+  line-height: 2.4rem;
+  font-size: 1.6rem;
+  display: inline-block;
+  vertical-align: top;
+  background: $blue-go !important;
+}
+h3 .label{
+  line-height: 2rem;
+  font-size: 1.4rem;
+  display: inline-block;
+  vertical-align: top;
+  background: $blue-go !important;
+}
+h4 .label{
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  display: inline-block;
+  vertical-align: top;
+  background: $blue-go !important;
+}
+h5 .label{
+  line-height: 1.1rem;
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: top;
+  background: $blue-go !important;
+}
+/*END OF LABELS*/
+
+/*TABLES*/
+.table-wrap{
+  margin-bottom: 2rem;
+  .table-title{
+    line-height: 4rem;
+    margin:0;
+    background: $white-go;
+    color: #000000;
+    padding-left: 2rem; 
+    border-radius: .5rem .5rem 0 0;
+  }
+  table{
+    width: 100%;
+    padding:1.4rem;
+    border-collapse: collapse;
+    border-radius: 0 0 .5rem .5rem;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 1px $white-go; /* this draws the table border  */ 
+    p{
+      padding:1rem 0;
+      margin:0;
+      font-size: 1.2rem;
+    }
+    td{
+      padding:.8rem 2rem;
+      font-size: 1.2rem;
+    }
+    thead{
+      td{
+        border-top:solid 1px $gray-go;
+        border-bottom: solid 1px $gray-go;
+        padding:1.2rem 2rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+      &.text td{
+        padding:.4rem 2rem;
+        border:medium none;
+      }
+    }
+    tbody {
+      tr:first-child td{
+        padding-top:2rem;
+      }
+      tr:last-child td{
+        padding-bottom: 2rem;
+      }
+    }
+  }
+}
+/*EDN OF TABLES*/
+
+
 
 @media (max-width: 768px) {
 	.btn,.btn-group {
