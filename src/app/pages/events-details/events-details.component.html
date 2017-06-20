@@ -1,0 +1,78 @@
+<section class="page-head">
+	<h1 class="page-title">Events Detail</h1>
+	<div class="pull-right search-and-profile">
+		<div class="search-bar">
+			<button><i class="fa fa-search" aria-hidden="true"></i></button>
+			<input type="text" name="" placeholder="Search">
+		</div>
+		<!-- THIS WILL BE DEFAULT PROFILE PICTURE ==== NO PROFILE PICTURE -->
+		<!-- <div class="profile-q-settings default">
+			<div class="btn-group" dropdown>
+			  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+			   T. Forwardov
+			  </button>
+			  <ul *dropdownMenu class="dropdown-menu" role="menu">
+			    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+			    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+			    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+			  </ul>
+			</div>
+		</div> -->	
+
+		<!-- THIS IS THE PROFILE WICK SETTINGS WITH PICURE -->
+		<div class="profile-q-settings">
+			<div class="btn-group" dropdown>				
+			  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+			  	<img src="assets/profile-pic-example.jpg">
+			    T. Forwardov<span class="caret"></span>
+			  </button>
+			  <ul *dropdownMenu class="dropdown-menu" role="menu">
+			    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+			    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+			    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+			  </ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="page-inner event-details">
+	<div class="col-lg-6 col-xs-12 left">
+		<div class="event-detail-img">
+			<img src="assets/event1.jpg">
+		</div>
+		<ul class="event-slots">
+			<li>
+				<button type="button" class="btn btn-default gradient black"><span>APPLY</span></button>
+				<p class="hours"><span>Slot 1</span><i class="fa fa-clock-o" aria-hidden="true"></i>04:00 pm - 4:30 pm</p>
+				<p class="price">Rock<span>£ 40</span></p>
+			</li>
+			<li>
+				<button type="button" class="btn btn-default gradient black"><span>APPLY</span></button>
+				<p class="hours"><span>Slot 1</span><i class="fa fa-clock-o" aria-hidden="true"></i>04:00 pm - 4:30 pm</p>
+				<p class="price">Rock<span>£ 40</span></p>
+			</li>
+			<li>
+				<button type="button" class="btn btn-default gradient black"><span>APPLY</span></button>
+				<p class="hours"><span>Slot 1</span><i class="fa fa-clock-o" aria-hidden="true"></i>04:00 pm - 4:30 pm</p>
+				<p class="price">Rock<span>£ 40</span></p>
+			</li>
+		</ul>
+	</div>
+	<div class="col-lg-6 col-xs-12 right">
+		<h1 class="event-detail-title">Dirty Thursday: Prince Anniversary <span>12/08/2018</span></h1>
+		<div class="hosted-by">
+			<div>	
+				<span>Event is Hosted At</span>
+				<span class="club-name">IBIZA Night Club</span>
+			</div>
+			<div class="img-holder">
+				<img src="data:image/png;base64,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">
+			</div>
+		</div>	
+		<div class="event-detail-time-date">
+			<p class="event-hours"><i class="fa fa-clock-o" aria-hidden="true"></i>Start: <span>04:00 pm</span> Finish: <span>08:00 pm</span></p>
+			<span class="event-location"><i class="fa fa-map-marker" aria-hidden="true"></i>Aveley Rd, Upminster, RM14 2TN </span>
+		</div>
+		<p class="event-detail-description">When May hits London, there really is no excuse not to get outside and start soaking up all that the city has to offer here really is no excuse not to get outside and start soaking up all that the city</p>
+	</div>
+</section>

@@ -18,17 +18,31 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { AlertModule } from 'ngx-bootstrap/alert';  
 
 // IMPORTS PAGES
+import { HomeComponent } from './home/home.component';
 import { ElementsComponent } from './pages/elements/elements.component';
-import { AboutComponent } from './about/about.component';
+import { PortalComponent } from './pages/portal/portal.component';
 import { ServicesComponent } from './services/services.component';
+import { EventsComponent } from './pages/events/events.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { EventsDetailsComponent } from './pages/events-details/events-details.component';
+import { MusicianComponent } from './pages/musician/musician.component';
+import { MusicianDetailsComponent } from './pages/musician-details/musician-details.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AboutComponent,
+    AppComponent,    
+    HomeComponent,
     ServicesComponent,
     ElementsComponent,
+    PortalComponent,
+    EventsComponent,
+    LoginComponent,
+    RegisterComponent,
+    EventsDetailsComponent,
+    MusicianComponent,
+    MusicianDetailsComponent,
   ],
   imports: [
     BrowserModule,
