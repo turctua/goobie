@@ -16,7 +16,7 @@
                   <a href="#"><i class="fa fa-globe" aria-hidden="true"></i>Venue</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#"><i class="fa fa-microphone" aria-hidden="true"></i>Musician</a>
+                  <a [routerLink]="['/portal', {outlets: {'portal-wrap': ['musician']}}]"><i class="fa fa-microphone" aria-hidden="true"></i>Musician</a>
                 </li>
                 <li class="nav-item">
                   <a href="#"><i class="fa fa-user-o" aria-hidden="true"></i>Profile</a>

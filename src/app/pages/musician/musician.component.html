@@ -1,3 +1,91 @@
-<p>
-  musician works!
-</p>
+<section class="page-head">
+	<h1 class="page-title">Musician</h1>
+	<div class="pull-right search-and-profile">
+		<div class="search-bar">
+			<button><i class="fa fa-search" aria-hidden="true"></i></button>
+			<input type="text" name="" placeholder="Search">
+		</div>
+		<div class="profile-q-settings">
+			<div class="btn-group" dropdown>				
+			  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+			  	<img src="assets/profile-pic-example.jpg">
+			    T. Forwardov<span class="caret"></span>
+			  </button>
+			  <ul *dropdownMenu class="dropdown-menu" role="menu">
+			    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+			    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+			    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+			  </ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="page-inner">
+	<ul class="sort-by">
+		<li><span>SORT BY:</span></li>
+		<li><button class="active">Date</button></li>
+		<li><button>Location</button></li>
+		<li><button>Distance</button></li>
+		<li>
+			<div class="btn-group" dropdown>
+			  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">T. Forwardov</button>
+			  <ul *dropdownMenu class="dropdown-menu" role="menu">
+			    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+			    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+			    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+			  </ul>
+			</div>
+		</li>
+	</ul>
+	<ul class="musician-list">
+		<li [routerLink]="['/portal', {outlets: {'portal-wrap': ['musician-details']}}]">
+			<div class="col-lg-5 musician-imgage">
+				<img src="assets/musician1.jpg">
+			</div>
+			<div class="col-lg-7 event-desc">
+				<h2>Coldplay</h2>
+				<span class="musician-origin"><i class="fa fa-map-marker" aria-hidden="true"></i>London, UK</span>
+				<p class="hashtags">#rock    #alternative   #britpop  #indie  #alternative rock</p>
+				<p class="events-goo">Events played with Goobie: <span>59</span></p>
+				<div class="socials">
+					<label class="social facebbok-like">Like on Facebook<span>365</span></label>
+					<label class="social tweets">Twitt this<span>89</span></label>
+				</div>
+			</div>
+		</li>
+		<li [routerLink]="['/portal', {outlets: {'portal-wrap': ['musician-details']}}]">
+			<div class="col-lg-5 musician-imgage">
+				<img src="assets/musician2.jpg">
+			</div>
+			<div class="col-lg-7 event-desc">
+				<h2>Paul Kalkbrenner</h2>
+				<span class="musician-origin"><i class="fa fa-map-marker" aria-hidden="true"></i>London, UK</span>
+				<p class="hashtags">#rock    #alternative   #britpop  #indie  #alternative rock</p>
+				<p class="events-goo">Events played with Goobie: <span>59</span></p>
+				<div class="socials">
+					<label class="social facebbok-like">Like on Facebook<span>365</span></label>
+					<label class="social tweets">Twitt this<span>89</span></label>
+				</div>
+			</div>
+		</li>
+		<li [routerLink]="['/portal', {outlets: {'portal-wrap': ['musician-details']}}]">
+			<div class="col-lg-5 musician-imgage">
+				<img src="assets/musician3.jpg">
+			</div>
+			<div class="col-lg-7 event-desc">
+				<h2>Planetary Assault Systems</h2>
+				<span class="musician-origin"><i class="fa fa-map-marker" aria-hidden="true"></i>London, UK</span>
+				<p class="hashtags">#rock    #alternative   #britpop  #indie  #alternative rock</p>
+				<p class="events-goo">Events played with Goobie: <span>59</span></p>
+				<div class="socials">
+					<label class="social facebbok-like">Like on Facebook<span>365</span></label>
+					<label class="social tweets">Twitt this<span>89</span></label>
+				</div>
+			</div>
+		</li>
+	</ul>
+</section>
+<section class="page-pagination">
+	<pagination [boundaryLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage" class="pagination-sm"
+            previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>        
+</section>
